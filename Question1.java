@@ -3,8 +3,8 @@ public class Question1{
 	public static void main(String args[]){
 		int num1 = Integer.parseInt(args[0]);
 		int num2 = Integer.parseInt(args[1]);
-		if(!(num1<=num2 && num1>0 && num2>0))
-			return;
+		assert(num1<=num2 && num1>0 && num2>0):"Not valid inputs";
+			
 		//if(num1<num2)
 		//	return;
 		System.out.println("Prime numbers between " + num1 + " and " + num2 + " is:");
