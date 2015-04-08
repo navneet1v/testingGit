@@ -20,9 +20,12 @@ public class TestThread{
 			System.out.println("Thread 1 has started");
 			synchronized(lock1){
 				System.out.println("Thread 1 has accuired lock1");
-				try{Thread.sleep(10);}
-				catch(InterruptedException e){System.out.println("Thread is interrupted ");}
-				synchronized(lock2){System.out.println("lock 2 is accuired by thread 2");}
+				try{
+					Thread.sleep(10);
+				}catch(InterruptedException e){System.out.println("Thread is interrupted ");}
+				synchronized(lock2){
+					System.out.println("lock 2 is accuired by thread 1");
+				}
 			}
 		}
 	}
